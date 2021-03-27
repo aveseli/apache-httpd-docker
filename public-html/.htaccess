@@ -1,0 +1,6 @@
+RewriteEngine On
+
+#RewriteRule .* - [E=CLOUD_STAGE:dev]
+
+RewriteCond expr "! %{REQUEST_FILENAME} -strmatch '*/config.%{ENV:CLOUD_STAGE}.js'"
+RewriteRule .*config.*\.js$ /config/config.%{ENV:CLOUD_STAGE}.js [L,NC]

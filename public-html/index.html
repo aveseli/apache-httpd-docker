@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript: Hallo Welt</title>
+    <script src="config/config.js"></script>
+    <noscript>
+        Sie haben JavaScript deaktiviert.
+    </noscript>
+</head>
+
+<body>
+    <p>Should render a variable defined in config.js</p>
+    <p id="replace-me">Didnt work</p>
+</body>
+
+<script>
+    var p = document.getElementById("replace-me").innerText = TEXT_VALUE;
+    console.log(p);
+</script>
+
+</html>

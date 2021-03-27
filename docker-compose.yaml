@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  httpd:
+    build: ./httpd
+    ports: 
+      - "8080:80"
+    volumes:
+      - ./public-html:/usr/local/apache2/htdocs/
+    environment: 
+      - CLOUD_STAGE=prod
+volumes:
+  myapp:
